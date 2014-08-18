@@ -8,7 +8,7 @@
 
 int main(int argc, char** argv) {
 
-#pragma omp parallel
+#pragma omp parallel num_threads(8) 
 	{
 		for (int i = INT_MIN; i < INT_MAX; i++) ;
 		printf("Done with pass %d\n",omp_get_thread_num());
