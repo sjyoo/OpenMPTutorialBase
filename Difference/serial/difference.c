@@ -5,34 +5,34 @@
 
 int main()
 {
-  const int N = 10000;	  // # of intervals
-  const double h = 0.001; // size of interval
-  double y[N];		  // value of function
-  const int prune = 1;	  // print every...
+	const int N = 10000;	  // # of intervals
+	const double h = 0.001; // size of interval
+	double y[N];		  // value of function
+	const int prune = 1;	  // print every...
 
-  for(int i = 0; i < N; i++)
-    y[i] = sin(i*h);
-  
-  for(int i = 0; i < N; i++)
-    {
-      if(i%prune == 0)
-	printf("%g\t%g\n", i*h, y[i]);
-    }
-  
-  for(int i = 0; i < N - 1; i++)
-    {
-      y[i] = (y[i+1]-y[i])/h;	// forward difference
-    }
+	for(int i = 0; i < N; i++)
+		y[i] = sin(i*h);
 
-  y[N-1] = y[N-2];		// kind of kluge
+	for(int i = 0; i < N; i++)
+	{
+		if(i%prune == 0)
+			printf("%g\t%g\n", i*h, y[i]);
+	}
 
-  printf("\n\n");
-   
-  for(int i = 0; i < N; i++)
-    {
-      if(i%prune == 0)
-	printf("%g\t%g\n", i*h, y[i]);
-    }
+	for(int i = 0; i < N - 1; i++)
+	{
+		y[i] = (y[i+1]-y[i])/h;	// forward difference
+	}
 
-  return 0;
+	y[N-1] = y[N-2];		// kind of kluge
+
+	printf("\n\n");
+
+	for(int i = 0; i < N; i++)
+	{
+		if(i%prune == 0)
+			printf("%g\t%g\n", i*h, y[i]);
+	}
+
+	return 0;
 }
