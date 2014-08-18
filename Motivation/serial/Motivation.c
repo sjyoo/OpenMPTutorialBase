@@ -18,5 +18,17 @@ int main(int argc, char** argv) {
 
 	for (int i = INT_MIN; i < INT_MAX; i++) ;
 	printf("Done with fourth pass\n");
+
+	for (int i = INT_MIN; i < INT_MAX; i++) ;
+	printf("Done with fifth pass\n");
+
+	for (int i = INT_MIN; i < INT_MAX; i++) ;
+	printf("Done with sixth pass\n");
+
+	for (int i = INT_MIN; i < INT_MAX; i++) ;
+	printf("Done with seventh pass\n");
+
+	for (int i = INT_MIN; i < INT_MAX; i++) ;
+	printf("Done with eighth pass\n");
 }
 
